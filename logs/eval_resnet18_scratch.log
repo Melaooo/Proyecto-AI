@@ -1,0 +1,20 @@
+{
+  "name": "resnet18_scratch",
+  "split": "test",
+  "n": 5500,
+  "best_epoch": 26,
+  "accuracy": 0.9915,
+  "balanced_accuracy": 0.9915,
+  "macro_precision": 0.9915,
+  "macro_recall": 0.9915,
+  "macro_f1": 0.9915,
+  "params": 11182155,
+  "encoder_dim": 512,
+  "latency_ms_mps": 2.8393,
+  "latency_ms_cpu": 8.7897,
+  "accuracy_by_hand_size": {
+    "pequeña (lejos)": 0.9935,
+    "mediana": 0.9956,
+    "grande (cerca)": 0.9852
+  }
+}

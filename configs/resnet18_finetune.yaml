@@ -1,0 +1,15 @@
+# ResNet18 ImageNet + fine-tuning completo
+name: resnet18_finetune
+arch: resnet18
+pretrained: true
+freeze_encoder: false
+lr: 0.0003
+epochs: 15
+patience: 4
+seed: 42
+img_size: 128
+batch_size: 128
+num_workers: 6
+weight_decay: 0.0001
+label_smoothing: 0.1
+dropout: 0.2

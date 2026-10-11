@@ -1,0 +1,20 @@
+{
+  "name": "cnn_residual_scratch",
+  "split": "test",
+  "n": 5500,
+  "best_epoch": 27,
+  "accuracy": 0.9916,
+  "balanced_accuracy": 0.9916,
+  "macro_precision": 0.9917,
+  "macro_recall": 0.9916,
+  "macro_f1": 0.9916,
+  "params": 1229227,
+  "encoder_dim": 256,
+  "latency_ms_mps": 1.9,
+  "latency_ms_cpu": 6.033,
+  "accuracy_by_hand_size": {
+    "pequeña (lejos)": 0.988,
+    "mediana": 0.9946,
+    "grande (cerca)": 0.9923
+  }
+}

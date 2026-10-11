@@ -1,0 +1,3 @@
+name,val_macro_f1_con_landmarks,val_accuracy_con_landmarks,val_accuracy_todas,val_balanced_accuracy_todas,val_macro_f1_todas,test_macro_f1_con_landmarks,test_accuracy_con_landmarks,test_accuracy_todas,test_balanced_accuracy_todas,test_macro_f1_todas
+landmarks_logreg,0.9455,0.9453,0.9215,0.9215,0.933,0.9548,0.9548,0.9333,0.9333,0.9436
+landmarks_random_forest,0.9798,0.9798,0.9552,0.9552,0.9671,0.9834,0.9834,0.9613,0.9613,0.972

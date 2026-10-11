@@ -1,0 +1,20 @@
+{
+  "name": "resnet18_linear_probe",
+  "split": "test",
+  "n": 5500,
+  "best_epoch": 12,
+  "accuracy": 0.7636363636363637,
+  "balanced_accuracy": 0.7636363636363637,
+  "macro_precision": 0.7677625137945777,
+  "macro_recall": 0.7636363636363637,
+  "macro_f1": 0.7630717874391455,
+  "params": 11182155,
+  "encoder_dim": 512,
+  "latency_ms_mps": 2.8112925000095856,
+  "latency_ms_cpu": 8.905429999995249,
+  "accuracy_by_hand_size": {
+    "pequeña (lejos)": 0.7915,
+    "mediana": 0.7756,
+    "grande (cerca)": 0.7236
+  }
+}

@@ -1,0 +1,17 @@
+resnet18_linear_probe: 11,182,155 parámetros (5,643 entrenables) en mps
+época  1 | train_loss 1.754 | val_loss 1.190 | val_acc 0.635 | val_F1 0.627 | 36s
+época  2 | train_loss 1.356 | val_loss 1.065 | val_acc 0.670 | val_F1 0.668 | 11s
+época  3 | train_loss 1.291 | val_loss 1.010 | val_acc 0.689 | val_F1 0.684 | 11s
+época  4 | train_loss 1.259 | val_loss 0.949 | val_acc 0.708 | val_F1 0.707 | 11s
+época  5 | train_loss 1.243 | val_loss 0.927 | val_acc 0.715 | val_F1 0.714 | 10s
+época  6 | train_loss 1.230 | val_loss 0.913 | val_acc 0.724 | val_F1 0.722 | 11s
+época  7 | train_loss 1.223 | val_loss 0.910 | val_acc 0.718 | val_F1 0.718 | 10s
+época  8 | train_loss 1.212 | val_loss 0.907 | val_acc 0.718 | val_F1 0.717 | 11s
+época  9 | train_loss 1.210 | val_loss 0.894 | val_acc 0.727 | val_F1 0.726 | 10s
+época 10 | train_loss 1.206 | val_loss 0.895 | val_acc 0.730 | val_F1 0.730 | 10s
+época 11 | train_loss 1.204 | val_loss 0.903 | val_acc 0.725 | val_F1 0.725 | 11s
+época 12 | train_loss 1.204 | val_loss 0.891 | val_acc 0.732 | val_F1 0.732 | 10s
+época 13 | train_loss 1.199 | val_loss 0.892 | val_acc 0.732 | val_F1 0.731 | 10s
+época 14 | train_loss 1.195 | val_loss 0.891 | val_acc 0.732 | val_F1 0.731 | 10s
+época 15 | train_loss 1.199 | val_loss 0.890 | val_acc 0.732 | val_F1 0.730 | 10s
+Mejor val macro-F1: 0.7318

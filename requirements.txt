@@ -1,0 +1,13 @@
+ipykernel==7.4.0
+matplotlib==3.11.2
+numpy==2.5.4
+pandas==3.0.6
+pillow==12.3.0
+PyYAML==6.0.3
+remotezip==0.12.6
+scikit-learn==1.9.1
+torch==2.14.1
+torchvision==0.29.1
+tqdm==4.70.1
+certifi==2026.7.22
+tabulate==0.10.0

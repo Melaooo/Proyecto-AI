@@ -1,0 +1,20 @@
+{
+  "name": "resnet18_finetune",
+  "split": "test",
+  "n": 5500,
+  "best_epoch": 12,
+  "accuracy": 0.9955,
+  "balanced_accuracy": 0.9955,
+  "macro_precision": 0.9955,
+  "macro_recall": 0.9955,
+  "macro_f1": 0.9955,
+  "params": 11182155,
+  "encoder_dim": 512,
+  "latency_ms_mps": 2.7298,
+  "latency_ms_cpu": 8.9783,
+  "accuracy_by_hand_size": {
+    "pequeña (lejos)": 0.9946,
+    "mediana": 0.9989,
+    "grande (cerca)": 0.9929
+  }
+}

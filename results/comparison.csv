@@ -1,0 +1,7 @@
+modelo,accuracy,balanced_accuracy,macro_f1,macro_f1_solo_con_landmarks,macro_precision,macro_recall,params_M,dim_embedding,latencia_ms_cpu,latencia_ms_mps,mejor_epoca,acc_pequeña (lejos),acc_mediana,acc_grande (cerca)
+landmarks_logreg,0.9333,0.9333,0.9436,0.9548,,,,,,,,,,
+landmarks_random_forest,0.9613,0.9613,0.972,0.9834,,,,,,,,,,
+cnn_residual_scratch,0.9916,0.9916,0.9916,,0.9917,0.9916,1.2292,256.0,6.033,1.9,27.0,0.988,0.9946,0.9923
+resnet18_scratch,0.9915,0.9915,0.9915,,0.9915,0.9915,11.1822,512.0,8.7897,2.8393,26.0,0.9935,0.9956,0.9852
+resnet18_linear_probe,0.7636,0.7636,0.7631,,0.7678,0.7636,11.1822,512.0,8.9054,2.8113,12.0,0.7915,0.7756,0.7236
+resnet18_finetune,0.9955,0.9955,0.9955,,0.9955,0.9955,11.1822,512.0,8.9783,2.7298,12.0,0.9946,0.9989,0.9929

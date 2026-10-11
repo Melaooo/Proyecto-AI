@@ -1,0 +1,17 @@
+resnet18_finetune: 11,182,155 parámetros (11,182,155 entrenables) en mps
+época  1 | train_loss 0.751 | val_loss 0.126 | val_acc 0.991 | val_F1 0.991 | 58s
+época  2 | train_loss 0.571 | val_loss 0.122 | val_acc 0.994 | val_F1 0.994 | 32s
+época  3 | train_loss 0.553 | val_loss 0.108 | val_acc 0.995 | val_F1 0.995 | 32s
+época  4 | train_loss 0.546 | val_loss 0.110 | val_acc 0.994 | val_F1 0.994 | 32s
+época  5 | train_loss 0.542 | val_loss 0.109 | val_acc 0.996 | val_F1 0.996 | 32s
+época  6 | train_loss 0.539 | val_loss 0.098 | val_acc 0.997 | val_F1 0.997 | 32s
+época  7 | train_loss 0.534 | val_loss 0.106 | val_acc 0.996 | val_F1 0.996 | 32s
+época  8 | train_loss 0.530 | val_loss 0.100 | val_acc 0.996 | val_F1 0.996 | 32s
+época  9 | train_loss 0.528 | val_loss 0.101 | val_acc 0.997 | val_F1 0.997 | 32s
+época 10 | train_loss 0.526 | val_loss 0.098 | val_acc 0.997 | val_F1 0.997 | 32s
+época 11 | train_loss 0.527 | val_loss 0.102 | val_acc 0.997 | val_F1 0.997 | 32s
+época 12 | train_loss 0.524 | val_loss 0.100 | val_acc 0.998 | val_F1 0.998 | 32s
+época 13 | train_loss 0.523 | val_loss 0.101 | val_acc 0.997 | val_F1 0.997 | 32s
+época 14 | train_loss 0.524 | val_loss 0.100 | val_acc 0.997 | val_F1 0.997 | 32s
+época 15 | train_loss 0.523 | val_loss 0.099 | val_acc 0.997 | val_F1 0.997 | 32s
+Mejor val macro-F1: 0.9976

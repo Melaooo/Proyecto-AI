@@ -1,0 +1,32 @@
+resnet18_scratch: 11,182,155 parámetros (11,182,155 entrenables) en mps
+época  1 | train_loss 1.402 | val_loss 0.528 | val_acc 0.836 | val_F1 0.833 | 57s
+época  2 | train_loss 0.822 | val_loss 0.317 | val_acc 0.921 | val_F1 0.920 | 32s
+época  3 | train_loss 0.703 | val_loss 0.236 | val_acc 0.955 | val_F1 0.954 | 31s
+época  4 | train_loss 0.660 | val_loss 0.160 | val_acc 0.974 | val_F1 0.974 | 32s
+época  5 | train_loss 0.622 | val_loss 0.160 | val_acc 0.979 | val_F1 0.979 | 32s
+época  6 | train_loss 0.606 | val_loss 0.176 | val_acc 0.972 | val_F1 0.973 | 32s
+época  7 | train_loss 0.595 | val_loss 0.135 | val_acc 0.985 | val_F1 0.985 | 32s
+época  8 | train_loss 0.580 | val_loss 0.161 | val_acc 0.984 | val_F1 0.984 | 32s
+época  9 | train_loss 0.572 | val_loss 0.157 | val_acc 0.978 | val_F1 0.978 | 32s
+época 10 | train_loss 0.570 | val_loss 0.144 | val_acc 0.982 | val_F1 0.982 | 32s
+época 11 | train_loss 0.564 | val_loss 0.127 | val_acc 0.988 | val_F1 0.988 | 32s
+época 12 | train_loss 0.556 | val_loss 0.130 | val_acc 0.989 | val_F1 0.989 | 32s
+época 13 | train_loss 0.553 | val_loss 0.147 | val_acc 0.982 | val_F1 0.982 | 32s
+época 14 | train_loss 0.551 | val_loss 0.127 | val_acc 0.989 | val_F1 0.989 | 32s
+época 15 | train_loss 0.544 | val_loss 0.131 | val_acc 0.988 | val_F1 0.988 | 32s
+época 16 | train_loss 0.542 | val_loss 0.118 | val_acc 0.989 | val_F1 0.989 | 32s
+época 17 | train_loss 0.539 | val_loss 0.119 | val_acc 0.991 | val_F1 0.991 | 32s
+época 18 | train_loss 0.540 | val_loss 0.124 | val_acc 0.988 | val_F1 0.988 | 32s
+época 19 | train_loss 0.533 | val_loss 0.120 | val_acc 0.991 | val_F1 0.991 | 32s
+época 20 | train_loss 0.532 | val_loss 0.115 | val_acc 0.992 | val_F1 0.992 | 32s
+época 21 | train_loss 0.529 | val_loss 0.118 | val_acc 0.992 | val_F1 0.992 | 32s
+época 22 | train_loss 0.527 | val_loss 0.117 | val_acc 0.990 | val_F1 0.990 | 32s
+época 23 | train_loss 0.526 | val_loss 0.113 | val_acc 0.992 | val_F1 0.992 | 32s
+época 24 | train_loss 0.525 | val_loss 0.116 | val_acc 0.992 | val_F1 0.992 | 32s
+época 25 | train_loss 0.525 | val_loss 0.115 | val_acc 0.993 | val_F1 0.993 | 32s
+época 26 | train_loss 0.524 | val_loss 0.114 | val_acc 0.995 | val_F1 0.995 | 32s
+época 27 | train_loss 0.524 | val_loss 0.114 | val_acc 0.995 | val_F1 0.995 | 32s
+época 28 | train_loss 0.524 | val_loss 0.114 | val_acc 0.994 | val_F1 0.994 | 32s
+época 29 | train_loss 0.523 | val_loss 0.113 | val_acc 0.994 | val_F1 0.994 | 32s
+época 30 | train_loss 0.523 | val_loss 0.113 | val_acc 0.994 | val_F1 0.994 | 32s
+Mejor val macro-F1: 0.9949

@@ -1,0 +1,15 @@
+# CNN residual propia (4 bloques residuales), entrenada desde cero
+name: cnn_residual_scratch
+arch: cnn_residual
+pretrained: false
+freeze_encoder: false
+lr: 0.001
+epochs: 30
+patience: 6
+seed: 42
+img_size: 128
+batch_size: 128
+num_workers: 6
+weight_decay: 0.0001
+label_smoothing: 0.1
+dropout: 0.2

@@ -1,0 +1,14 @@
+arch: cnn_residual
+batch_size: 128
+dropout: 0.2
+epochs: 30
+freeze_encoder: false
+img_size: 128
+label_smoothing: 0.1
+lr: 0.001
+name: cnn_residual_scratch
+num_workers: 6
+patience: 6
+pretrained: false
+seed: 42
+weight_decay: 0.0001

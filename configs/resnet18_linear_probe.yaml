@@ -1,0 +1,15 @@
+# ResNet18 ImageNet congelada: solo se entrena la capa lineal final
+name: resnet18_linear_probe
+arch: resnet18
+pretrained: true
+freeze_encoder: true
+lr: 0.001
+epochs: 15
+patience: 4
+seed: 42
+img_size: 128
+batch_size: 128
+num_workers: 6
+weight_decay: 0.0001
+label_smoothing: 0.1
+dropout: 0.2

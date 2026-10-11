@@ -1,0 +1,20 @@
+# Entorno virtual (se recrea con requirements.txt)
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Datos pesados (se regeneran con scripts/ o run_hito1.sh)
+data/raw/
+data/images/
+data/crops/
+data/download.log
+*.part
+# data/splits/ SÍ se versiona: congela el subconjunto (seed 42)
+
+# Checkpoints: solo se versionan el modelo final y la CNN propia (liviana).
+# Los demás se reproducen con: python -m src.train --config configs/<exp>.yaml
+checkpoints/**/*.pt
+!checkpoints/resnet18_finetune/*.pt
+!checkpoints/cnn_residual_scratch/*.pt

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Reproduce el Hito 1 completo: datos -> baseline -> entrenamiento -> evaluación -> comparación.
-# Uso: bash run_hito1.sh   (desde la carpeta proyecto24, con el venv creado)
+# Uso: bash run_hito1.sh   (desde la carpeta raíz del repositorio, con el venv creado)
 set -euo pipefail
 cd "$(dirname "$0")"
 PY=.venv/bin/python

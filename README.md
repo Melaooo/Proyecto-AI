@@ -7,7 +7,8 @@ Inteligencia Artificial 2026. **Hito 1: clasificación de gestos + encoder reuti
 Probado en macOS (Apple M1 Pro, 16 GB) con Python 3.12 y aceleración MPS (también corre en CUDA o CPU).
 
 ```bash
-cd proyecto24
+git clone https://github.com/Melaooo/Proyecto-AI.git
+cd Proyecto-AI
 python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

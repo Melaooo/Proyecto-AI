@@ -1,0 +1,12 @@
+# Encoder del Hito 1 con layer3 y layer4 ajustados (fine tuning parcial)
+name: det_gestures_hito1_ft
+mode: gestures
+init: hito1
+train_backbone: layer34
+seed: 42
+epochs: 12
+batch_size: 32
+num_workers: 6
+lr: 0.001
+lr_backbone: 0.0001
+weight_decay: 0.0001

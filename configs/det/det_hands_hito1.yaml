@@ -1,0 +1,12 @@
+# PERSONA 2 - detector de manos (1 clase) para la cascada; mismo ajuste que el mejor directo (layer3/4)
+name: det_hands_hito1
+mode: hands
+init: hito1
+train_backbone: layer34
+seed: 42
+epochs: 12
+batch_size: 32
+num_workers: 6
+lr: 0.001
+lr_backbone: 0.0001
+weight_decay: 0.0001

@@ -1,0 +1,14 @@
+det_gestures_hito1_ft: 11,284,496 parámetros entrenables en mps | 15000 imágenes train, 3000 val
+época  1 | loss 1.456 (obj 0.299 box 0.381 cls 0.396) | val mAP50 0.791 P 0.932 R 0.337 | 161s
+época  2 | loss 0.854 (obj 0.161 box 0.262 cls 0.169) | val mAP50 0.885 P 0.974 R 0.467 | 136s
+época  3 | loss 0.699 (obj 0.135 box 0.229 cls 0.106) | val mAP50 0.884 P 0.972 R 0.431 | 135s
+época  4 | loss 0.604 (obj 0.119 box 0.208 cls 0.070) | val mAP50 0.911 P 0.970 R 0.615 | 135s
+época  5 | loss 0.541 (obj 0.107 box 0.193 cls 0.048) | val mAP50 0.914 P 0.972 R 0.556 | 135s
+época  6 | loss 0.492 (obj 0.097 box 0.181 cls 0.034) | val mAP50 0.924 P 0.979 R 0.627 | 135s
+época  7 | loss 0.448 (obj 0.089 box 0.170 cls 0.019) | val mAP50 0.933 P 0.979 R 0.618 | 135s
+época  8 | loss 0.400 (obj 0.080 box 0.156 cls 0.009) | val mAP50 0.931 P 0.972 R 0.673 | 135s
+época  9 | loss 0.371 (obj 0.072 box 0.146 cls 0.008) | val mAP50 0.932 P 0.971 R 0.687 | 135s
+época 10 | loss 0.345 (obj 0.066 box 0.138 cls 0.004) | val mAP50 0.934 P 0.970 R 0.716 | 135s
+época 11 | loss 0.327 (obj 0.062 box 0.131 cls 0.003) | val mAP50 0.934 P 0.970 R 0.714 | 135s
+época 12 | loss 0.318 (obj 0.061 box 0.127 cls 0.003) | val mAP50 0.935 P 0.972 R 0.722 | 135s
+Mejor val mAP50: 0.9352

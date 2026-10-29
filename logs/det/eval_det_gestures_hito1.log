@@ -1,0 +1,23 @@
+{
+ "AP50_like": 0.8006,
+ "AP50_dislike": 0.8581,
+ "AP50_palm": 0.9161,
+ "AP50_stop": 0.9249,
+ "AP50_fist": 0.8971,
+ "AP50_one": 0.8581,
+ "AP50_peace": 0.8659,
+ "AP50_ok": 0.8796,
+ "AP50_call": 0.8907,
+ "AP50_mute": 0.927,
+ "AP50_no_gesture": 0.6691,
+ "mAP50": 0.8625,
+ "mAP50_95": 0.498,
+ "precision": 0.8921,
+ "recall": 0.7629,
+ "F1": 0.8225,
+ "mean_IoU_TP": 0.7828,
+ "op_score_from_val": 0.3,
+ "params_head": 791056,
+ "params_total": 11967568,
+ "best_epoch": 12
+}

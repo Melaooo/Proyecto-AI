@@ -98,3 +98,49 @@ enc = ResNet18Encoder(pretrained=False)
 enc.load_state_dict(torch.load("checkpoints/resnet18_finetune/encoder.pt")["encoder"])
 emb = enc(x)  # x: (B, 3, 128, 128) normalizado ImageNet -> (B, 512)
 ```
+
+---
+
+# Hito 2: detección de manos y gestos reutilizando el encoder
+
+Detector **denso** basado en el notebook de clase *Detección de múltiples objetos con un encoder
+preentrenado* (BCCD), con el encoder ResNet18 del Hito 1 en lugar de DINOv2:
+
+```
+imagen (letterbox 288x384) -> encoder ResNet18 del Hito 1 (layer3 + layer4, stride 16)
+  -> grilla 18x24 x 768 canales -> cabeza conv 1x1 -> 3x3 -> 1x1
+  -> por celda [objectness, tx, ty, tw, th, clases] -> score = σ(obj)·p(clase) -> NMS por clase
+```
+
+- **Datos:** mismas imágenes y splits por usuario del Hito 1, con **todas** las manos de cada imagen
+  (`scripts/make_det_annotations.py` -> `data/splits/det_*.json`; 20 % de las imágenes tiene 2 manos).
+- **Pérdida:** asignación del objeto a la celda de su centro; focal loss (objectness) + 1 − GIoU (caja)
+  + entropía cruzada (clase), pesos 1 / 2 / 1.
+- **Métricas:** AP estilo Pascal VOC por clase -> mAP@0.5 y mAP@[.5:.95]; precision/recall/F1 con el
+  umbral de score que maximiza F1 en validación; IoU medio de los verdaderos positivos.
+- **Selección:** mejor mAP@0.5 en validación; test se usa una vez.
+
+```bash
+python scripts/make_det_annotations.py
+python -m src.det_train --config configs/det/det_gestures_hito1.yaml     # prueba: --limit 256 --epochs 1
+python -m src.det_evaluate --ckpt checkpoints/det/det_gestures_hito1/best.pt
+```
+
+| Config | Qué compara |
+|---|---|
+| `det_gestures_hito1` | Detector directo de 11 clases, encoder del Hito 1 congelado (base) |
+| `det_gestures_imagenet` | Mismo detector con ResNet18 ImageNet congelada |
+| `det_gestures_hito1_ft` | Encoder del Hito 1 con layer3/layer4 ajustados |
+| `det_hands_hito1` | Detector de manos (1 clase) para la cascada con el clasificador del Hito 1 |
+
+Resultados en test (5 000 imágenes, 6 049 manos; P/R/F1 con el umbral que maximiza F1 en validación):
+
+| Modelo | mAP@0.5 | mAP@[.5:.95] | Precision | Recall | F1 | IoU medio TP |
+|---|---|---|---|---|---|---|
+| `det_gestures_imagenet` | 0.808 | 0.408 | 0.792 | 0.770 | 0.781 | 0.751 |
+| `det_gestures_hito1` | 0.862 | 0.498 | 0.892 | 0.763 | 0.822 | 0.783 |
+| **`det_gestures_hito1_ft`** | **0.930** | **0.617** | 0.919 | 0.919 | **0.919** | **0.830** |
+
+Salidas: `checkpoints/det/<exp>/` (best.pt, history.csv) y `results/det/<exp>/`
+(metrics_test.json, predictions_test.json en coordenadas de la imagen original, examples_test.png).
+El reparto del trabajo y la parte pendiente están en [HITO2_PARA_JAVIER.md](HITO2_PARA_JAVIER.md).

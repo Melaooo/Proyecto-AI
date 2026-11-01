@@ -143,14 +143,13 @@ Resultados en test (5 000 imágenes, 6 049 manos; P/R/F1 con el umbral que maxim
 
 Salidas: `checkpoints/det/<exp>/` (best.pt, history.csv) y `results/det/<exp>/`
 (metrics_test.json, predictions_test.json en coordenadas de la imagen original, examples_test.png).
-El reparto del trabajo y la parte pendiente están en [HITO2_PARA_JAVIER.md](HITO2_PARA_JAVIER.md).
 
-## Hito 2 — Persona 2 (Javier): cascada y análisis por condición
+## Hito 2: cascada y análisis por condición
 
 **Idea en simple.** Hay dos formas de detectar gestos:
 
-- **Directo** (Tomás, `det_gestures_hito1_ft`): un solo detector encuentra la mano y dice el gesto.
-- **Cascada** (Javier): el detector de manos (`det_hands_hito1`) solo dice *dónde* hay una mano; esa mano se
+- **Directo** (`det_gestures_hito1_ft`): un solo detector encuentra la mano y dice el gesto.
+- **Cascada**: el detector de manos (`det_hands_hito1`) solo dice *dónde* hay una mano; esa mano se
   recorta igual que en el Hito 1 y el clasificador del Hito 1 (`resnet18_finetune`) dice *qué gesto* es.
   Score final = score del detector × probabilidad del gesto.
 
@@ -178,14 +177,15 @@ python -m src.det_train --config configs/det/det_hands_hito1.yaml   # entrena el
 python -m src.det_evaluate --ckpt checkpoints/det/det_hands_hito1/best.pt
 python -m src.det_cascade                                           # necesita det_hands_hito1 entrenado
 python -m src.det_analysis                                          # necesita cascade y det_gestures_hito1_ft
-python -m src.demo --random 4                                       # opcional: demo con 4 fotos de test
+python -m src.demo --image foto.jpg                                 # demo con una foto propia
+python -m src.demo --random 4                                       # o con 4 fotos de test
 ```
 
 ### Resultados (test, 5 000 imágenes, 6 049 manos)
 
 | Sistema | mAP@0.5 | mAP@[.5:.95] | Precision | Recall | F1 | IoU medio TP |
 |---|---|---|---|---|---|---|
-| Detector de manos (1 clase) | 0.967 | 0.634 | 0.956 | 0.953 | 0.955 | 0.837 |
+| Detector de manos (1 clase) | 0.966 | 0.634 | 0.956 | 0.953 | 0.954 | 0.837 |
 | Directo `det_gestures_hito1_ft` | 0.930 | 0.617 | 0.919 | 0.919 | 0.919 | 0.830 |
 | **Cascada** | **0.967** | **0.651** | 0.957 | 0.948 | **0.953** | 0.837 |
 

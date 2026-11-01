@@ -1,0 +1,31 @@
+sistema,condicion,grupo,imagenes,mAP50,mAP50_95,manos,recall_gesto,recall_localizacion
+directo,global,todo,5000,0.933,0.5895,6049,0.9129,0.9368
+directo,distancia a la cámara,lejos (<83 px),1645,0.83,0.4549,2172,0.8283,0.8679
+directo,distancia a la cámara,medio (83-117 px),1815,0.9692,0.6387,1981,0.9571,0.9758
+directo,distancia a la cámara,cerca (>117 px),1855,0.9686,0.6674,1896,0.9636,0.9752
+directo,una / dos manos,1 mano,3951,0.9557,0.6289,3951,0.9486,0.9724
+directo,una / dos manos,2 manos,1049,0.8902,0.5286,2098,0.8456,0.8699
+directo,fondo: brillo,bajo (0.03-0.46),1667,0.9269,0.5799,2035,0.9081,0.9337
+directo,fondo: brillo,medio (0.46-0.56),1666,0.929,0.5905,2070,0.9029,0.9271
+directo,fondo: brillo,alto (0.56-0.85),1667,0.9457,0.608,1944,0.9285,0.9506
+directo,fondo: contraste,bajo (0.04-0.20),1667,0.933,0.585,1953,0.915,0.9416
+directo,fondo: contraste,medio (0.20-0.24),1666,0.9362,0.5935,2077,0.9124,0.9345
+directo,fondo: contraste,alto (0.24-0.40),1667,0.9334,0.5999,2019,0.9113,0.9346
+directo,fondo: bordes (complejidad),bajo (0.00-0.10),1667,0.9423,0.6075,1918,0.9291,0.9473
+directo,fondo: bordes (complejidad),medio (0.10-0.16),1666,0.9357,0.5967,2032,0.9139,0.9385
+directo,fondo: bordes (complejidad),alto (0.16-0.69),1667,0.9237,0.576,2099,0.8971,0.9257
+cascada,global,todo,5000,0.9677,0.6498,6049,0.9415,0.9456
+cascada,distancia a la cámara,lejos (<83 px),1645,0.9382,0.5231,2172,0.8895,0.895
+cascada,distancia a la cámara,medio (83-117 px),1815,0.9877,0.6987,1981,0.9732,0.9743
+cascada,distancia a la cámara,cerca (>117 px),1855,0.9796,0.7269,1896,0.9678,0.9736
+cascada,una / dos manos,1 mano,3951,0.9825,0.6883,3951,0.9734,0.9777
+cascada,una / dos manos,2 manos,1049,0.9549,0.595,2098,0.8813,0.8851
+cascada,fondo: brillo,bajo (0.03-0.46),1667,0.9682,0.6448,2035,0.9327,0.9366
+cascada,fondo: brillo,medio (0.46-0.56),1666,0.9639,0.6468,2070,0.9391,0.9425
+cascada,fondo: brillo,alto (0.56-0.85),1667,0.9725,0.6686,1944,0.9532,0.9583
+cascada,fondo: contraste,bajo (0.04-0.20),1667,0.9723,0.6493,1953,0.9498,0.9534
+cascada,fondo: contraste,medio (0.20-0.24),1666,0.9606,0.6478,2077,0.9331,0.9384
+cascada,fondo: contraste,alto (0.24-0.40),1667,0.9723,0.6631,2019,0.9421,0.9455
+cascada,fondo: bordes (complejidad),bajo (0.00-0.10),1667,0.9704,0.6687,1918,0.9515,0.9552
+cascada,fondo: bordes (complejidad),medio (0.10-0.16),1666,0.9663,0.6526,2032,0.9414,0.9464
+cascada,fondo: bordes (complejidad),alto (0.16-0.69),1667,0.9688,0.6388,2099,0.9323,0.9362

@@ -1,0 +1,14 @@
+det_hands_hito1: 11,281,926 parámetros entrenables en cuda | 15000 imágenes train, 3000 val
+época  1 | loss 0.876 (obj 0.233 box 0.322 cls 0.000) | val mAP50 0.915 P 0.977 R 0.516 | 57s
+época  2 | loss 0.579 (obj 0.134 box 0.222 cls 0.000) | val mAP50 0.936 P 0.983 R 0.588 | 57s
+época  3 | loss 0.504 (obj 0.110 box 0.197 cls 0.000) | val mAP50 0.955 P 0.988 R 0.609 | 54s
+época  4 | loss 0.458 (obj 0.094 box 0.182 cls 0.000) | val mAP50 0.964 P 0.992 R 0.703 | 57s
+época  5 | loss 0.416 (obj 0.082 box 0.167 cls 0.000) | val mAP50 0.958 P 0.987 R 0.657 | 60s
+época  6 | loss 0.383 (obj 0.069 box 0.157 cls 0.000) | val mAP50 0.964 P 0.987 R 0.736 | 55s
+época  7 | loss 0.351 (obj 0.059 box 0.146 cls 0.000) | val mAP50 0.965 P 0.985 R 0.773 | 57s
+época  8 | loss 0.321 (obj 0.050 box 0.135 cls 0.000) | val mAP50 0.967 P 0.984 R 0.816 | 54s
+época  9 | loss 0.294 (obj 0.041 box 0.126 cls 0.000) | val mAP50 0.967 P 0.977 R 0.828 | 56s
+época 10 | loss 0.272 (obj 0.035 box 0.119 cls 0.000) | val mAP50 0.968 P 0.978 R 0.842 | 54s
+época 11 | loss 0.257 (obj 0.030 box 0.114 cls 0.000) | val mAP50 0.967 P 0.983 R 0.841 | 54s
+época 12 | loss 0.252 (obj 0.029 box 0.111 cls 0.000) | val mAP50 0.968 P 0.983 R 0.841 | 54s
+Mejor val mAP50: 0.9677

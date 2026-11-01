@@ -1,0 +1,13 @@
+{
+ "AP50_hand": 0.9665,
+ "mAP50": 0.9665,
+ "mAP50_95": 0.6339,
+ "precision": 0.956,
+ "recall": 0.9529,
+ "F1": 0.9545,
+ "mean_IoU_TP": 0.8365,
+ "op_score_from_val": 0.3,
+ "params_head": 788486,
+ "params_total": 11964998,
+ "best_epoch": 10
+}

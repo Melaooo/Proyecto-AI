@@ -144,3 +144,66 @@ Resultados en test (5 000 imágenes, 6 049 manos; P/R/F1 con el umbral que maxim
 Salidas: `checkpoints/det/<exp>/` (best.pt, history.csv) y `results/det/<exp>/`
 (metrics_test.json, predictions_test.json en coordenadas de la imagen original, examples_test.png).
 El reparto del trabajo y la parte pendiente están en [HITO2_PARA_JAVIER.md](HITO2_PARA_JAVIER.md).
+
+## Hito 2 — Persona 2 (Javier): cascada y análisis por condición
+
+**Idea en simple.** Hay dos formas de detectar gestos:
+
+- **Directo** (Tomás, `det_gestures_hito1_ft`): un solo detector encuentra la mano y dice el gesto.
+- **Cascada** (Javier): el detector de manos (`det_hands_hito1`) solo dice *dónde* hay una mano; esa mano se
+  recorta igual que en el Hito 1 y el clasificador del Hito 1 (`resnet18_finetune`) dice *qué gesto* es.
+  Score final = score del detector × probabilidad del gesto.
+
+Ambos se evalúan con la misma función (`src.det.evaluate_detections`) y el umbral se elige en validación,
+así que los números son comparables.
+
+| Archivo | Qué hace |
+|---|---|
+| `configs/det/det_hands_hito1.yaml` | Detector de manos (1 clase), mismo ajuste que el mejor directo (layer3/4 entrenables) |
+| `src/det_cascade.py` | Detector de manos → recorte → clasificador del Hito 1 → métricas en `results/det/cascade/` |
+| `src/det_analysis.py` | mAP y recall por distancia a la cámara, 1 vs 2 manos y tipo de fondo → `results/det/analysis/` |
+| `src/demo.py` | Foto → manos detectadas → gesto → comando (imágenes en `results/demo/`) |
+
+**Análisis por condición** (`results/det/analysis/resumen.md`):
+
+- *Distancia a la cámara:* tamaño de la mano en píxeles, en tercios (`<83`, `83–117`, `>117` px ≈ lejos / medio / cerca).
+- *Una / dos manos:* imágenes con 1 caja real vs 2; además, cuántas segundas manos se pierden.
+- *Fondos:* HaGRID no etiqueta el fondo, así que se mide por imagen el brillo, el contraste y la cantidad de
+  bordes fuera de las manos (fondo "cargado"); cada medida se parte en tercios.
+
+### Comandos (en orden)
+
+```bash
+python -m src.det_train --config configs/det/det_hands_hito1.yaml   # entrena el detector de manos
+python -m src.det_evaluate --ckpt checkpoints/det/det_hands_hito1/best.pt
+python -m src.det_cascade                                           # necesita det_hands_hito1 entrenado
+python -m src.det_analysis                                          # necesita cascade y det_gestures_hito1_ft
+python -m src.demo --random 4                                       # opcional: demo con 4 fotos de test
+```
+
+### Resultados (test, 5 000 imágenes, 6 049 manos)
+
+| Sistema | mAP@0.5 | mAP@[.5:.95] | Precision | Recall | F1 | IoU medio TP |
+|---|---|---|---|---|---|---|
+| Detector de manos (1 clase) | 0.967 | 0.634 | 0.956 | 0.953 | 0.955 | 0.837 |
+| Directo `det_gestures_hito1_ft` | 0.930 | 0.617 | 0.919 | 0.919 | 0.919 | 0.830 |
+| **Cascada** | **0.967** | **0.651** | 0.957 | 0.948 | **0.953** | 0.837 |
+
+La cascada gana sobre todo con manos lejanas (mAP@0.5 0.936 vs 0.822) y en imágenes con 2 manos
+(0.953 vs 0.885). En ambos sistemas la mano `no_gesture` es la que más se pierde.
+
+### Correrlo en Windows (con GPU NVIDIA)
+
+En PowerShell, dentro de la carpeta del proyecto (Python 3.12 instalado):
+
+```powershell
+py -3.12 -m venv .venv
+.venv\Scripts\activate
+pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cu132
+pip install -r requirements.txt
+$env:PYTHONUTF8=1
+```
+
+- Si `activate` da error de permisos: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` y repetir.
+- `data/images/` (2.6 GB) no está en git: hay que copiarla aparte.
+- Si el DataLoader falla, poner `num_workers: 0` en el YAML. Si sale *CUDA out of memory*, bajar `batch_size` a 16.

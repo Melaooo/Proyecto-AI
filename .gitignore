@@ -21,3 +21,4 @@ checkpoints/**/*.pt
 # Hito 2: se versiona solo el detector base
 !checkpoints/det/det_gestures_hito1/*.pt
 !checkpoints/det/det_gestures_hito1_ft/*.pt
+!checkpoints/det/det_hands_hito1/*.pt

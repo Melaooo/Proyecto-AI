@@ -1,0 +1,5 @@
+sistema,mano (imágenes con 2 manos),manos,perdidas,clase equivocada,recall_gesto,recall_localizacion
+directo,mano con gesto,1049,83,49,0.8742,0.9209
+directo,mano no_gesture,1049,190,2,0.817,0.8189
+cascada,mano con gesto,1049,60,7,0.9361,0.9428
+cascada,mano no_gesture,1049,181,1,0.8265,0.8275

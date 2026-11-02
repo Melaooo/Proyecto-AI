@@ -1,0 +1,162 @@
+det_gestures_imagenet: 791,056 parámetros entrenables en cuda | 15000 imágenes train, 3000 val
+época  1 | loss 2.572 (obj 0.504 box 0.444 cls 1.179) | val mAP50 0.363 P 0.812 R 0.007 | 246s
+época  2 | loss 1.564 (obj 0.282 box 0.344 cls 0.595) | val mAP50 0.598 P 0.890 R 0.127 | 171s
+época  3 | loss 1.330 (obj 0.246 box 0.319 cls 0.446) | val mAP50 0.671 P 0.939 R 0.123 | 171s
+época  4 | loss 1.204 (obj 0.225 box 0.302 cls 0.374) | val mAP50 0.725 P 0.942 R 0.162 | 172s
+época  5 | loss 1.113 (obj 0.211 box 0.292 cls 0.319) | val mAP50 0.736 P 0.962 R 0.136 | 171s
+época  6 | loss 1.036 (obj 0.202 box 0.280 cls 0.274) | val mAP50 0.751 P 0.924 R 0.285 | 172s
+época  7 | loss 0.979 (obj 0.194 box 0.271 cls 0.242) | val mAP50 0.789 P 0.965 R 0.211 | 127s
+época  8 | loss 0.921 (obj 0.188 box 0.262 cls 0.210) | val mAP50 0.796 P 0.961 R 0.270 | 121s
+época  9 | loss 0.865 (obj 0.181 box 0.253 cls 0.177) | val mAP50 0.794 P 0.960 R 0.262 | 170s
+época 10 | loss 0.829 (obj 0.177 box 0.246 cls 0.160) | val mAP50 0.806 P 0.960 R 0.302 | 134s
+época 11 | loss 0.804 (obj 0.174 box 0.242 cls 0.146) | val mAP50 0.806 P 0.964 R 0.299 | 169s
+época 12 | loss 0.793 (obj 0.174 box 0.239 cls 0.142) | val mAP50 0.807 P 0.966 R 0.297 | 169s
+Mejor val mAP50: 0.8068
+{
+ "AP50_like": 0.6946,
+ "AP50_dislike": 0.7786,
+ "AP50_palm": 0.8772,
+ "AP50_stop": 0.8972,
+ "AP50_fist": 0.8724,
+ "AP50_one": 0.7498,
+ "AP50_peace": 0.8108,
+ "AP50_ok": 0.7831,
+ "AP50_call": 0.8307,
+ "AP50_mute": 0.8988,
+ "AP50_no_gesture": 0.6724,
+ "mAP50": 0.806,
+ "mAP50_95": 0.4038,
+ "precision": 0.7879,
+ "recall": 0.7614,
+ "F1": 0.7744,
+ "mean_IoU_TP": 0.75,
+ "op_score_from_val": 0.25,
+ "params_head": 791056,
+ "params_total": 11967568,
+ "best_epoch": 12
+}
+det_gestures_hito1: 791,056 parámetros entrenables en cuda | 15000 imágenes train, 3000 val
+época  1 | loss 1.955 (obj 0.386 box 0.421 cls 0.726) | val mAP50 0.665 P 1.000 R 0.034 | 251s
+época  2 | loss 1.275 (obj 0.253 box 0.322 cls 0.377) | val mAP50 0.747 P 0.959 R 0.220 | 121s
+época  3 | loss 1.094 (obj 0.221 box 0.291 cls 0.290) | val mAP50 0.795 P 0.974 R 0.317 | 175s
+época  4 | loss 1.007 (obj 0.205 box 0.276 cls 0.250) | val mAP50 0.803 P 0.982 R 0.205 | 156s
+época  5 | loss 0.935 (obj 0.193 box 0.264 cls 0.215) | val mAP50 0.830 P 0.978 R 0.299 | 172s
+época  6 | loss 0.873 (obj 0.183 box 0.253 cls 0.184) | val mAP50 0.842 P 0.977 R 0.359 | 176s
+época  7 | loss 0.829 (obj 0.176 box 0.243 cls 0.167) | val mAP50 0.851 P 0.978 R 0.334 | 177s
+época  8 | loss 0.784 (obj 0.171 box 0.235 cls 0.143) | val mAP50 0.855 P 0.968 R 0.367 | 146s
+época  9 | loss 0.744 (obj 0.164 box 0.225 cls 0.129) | val mAP50 0.866 P 0.972 R 0.444 | 139s
+época 10 | loss 0.715 (obj 0.161 box 0.219 cls 0.117) | val mAP50 0.867 P 0.972 R 0.429 | 152s
+época 11 | loss 0.692 (obj 0.159 box 0.214 cls 0.106) | val mAP50 0.870 P 0.972 R 0.429 | 176s
+época 12 | loss 0.681 (obj 0.158 box 0.211 cls 0.102) | val mAP50 0.869 P 0.972 R 0.421 | 179s
+Mejor val mAP50: 0.8699
+{
+ "AP50_like": 0.8046,
+ "AP50_dislike": 0.8576,
+ "AP50_palm": 0.9227,
+ "AP50_stop": 0.9366,
+ "AP50_fist": 0.8948,
+ "AP50_one": 0.848,
+ "AP50_peace": 0.8752,
+ "AP50_ok": 0.8849,
+ "AP50_call": 0.8765,
+ "AP50_mute": 0.9246,
+ "AP50_no_gesture": 0.6703,
+ "mAP50": 0.8633,
+ "mAP50_95": 0.4984,
+ "precision": 0.88,
+ "recall": 0.7805,
+ "F1": 0.8272,
+ "mean_IoU_TP": 0.7831,
+ "op_score_from_val": 0.3,
+ "params_head": 791056,
+ "params_total": 11967568,
+ "best_epoch": 11
+}
+det_gestures_hito1_ft: 11,284,496 parámetros entrenables en cuda | 15000 imágenes train, 3000 val
+época  1 | loss 1.470 (obj 0.304 box 0.382 cls 0.401) | val mAP50 0.826 P 0.964 R 0.266 | 263s
+época  2 | loss 0.862 (obj 0.163 box 0.263 cls 0.173) | val mAP50 0.882 P 0.973 R 0.445 | 175s
+época  3 | loss 0.705 (obj 0.137 box 0.231 cls 0.107) | val mAP50 0.872 P 0.966 R 0.415 | 164s
+época  4 | loss 0.609 (obj 0.120 box 0.209 cls 0.072) | val mAP50 0.910 P 0.970 R 0.616 | 170s
+época  5 | loss 0.542 (obj 0.108 box 0.193 cls 0.049) | val mAP50 0.906 P 0.965 R 0.583 | 167s
+época  6 | loss 0.493 (obj 0.097 box 0.182 cls 0.033) | val mAP50 0.918 P 0.973 R 0.638 | 164s
+época  7 | loss 0.446 (obj 0.088 box 0.169 cls 0.020) | val mAP50 0.925 P 0.971 R 0.627 | 163s
+época  8 | loss 0.403 (obj 0.079 box 0.157 cls 0.010) | val mAP50 0.925 P 0.968 R 0.693 | 161s
+época  9 | loss 0.371 (obj 0.072 box 0.145 cls 0.009) | val mAP50 0.924 P 0.963 R 0.690 | 159s
+época 10 | loss 0.345 (obj 0.066 box 0.138 cls 0.004) | val mAP50 0.921 P 0.961 R 0.716 | 162s
+época 11 | loss 0.326 (obj 0.062 box 0.130 cls 0.003) | val mAP50 0.923 P 0.961 R 0.713 | 163s
+época 12 | loss 0.319 (obj 0.061 box 0.127 cls 0.003) | val mAP50 0.923 P 0.962 R 0.713 | 158s
+Mejor val mAP50: 0.9251
+{
+ "AP50_like": 0.9289,
+ "AP50_dislike": 0.9378,
+ "AP50_palm": 0.967,
+ "AP50_stop": 0.9594,
+ "AP50_fist": 0.9454,
+ "AP50_one": 0.8995,
+ "AP50_peace": 0.9189,
+ "AP50_ok": 0.9428,
+ "AP50_call": 0.9505,
+ "AP50_mute": 0.97,
+ "AP50_no_gesture": 0.8429,
+ "mAP50": 0.933,
+ "mAP50_95": 0.5895,
+ "precision": 0.9177,
+ "recall": 0.9129,
+ "F1": 0.9153,
+ "mean_IoU_TP": 0.8157,
+ "op_score_from_val": 0.25,
+ "params_head": 791056,
+ "params_total": 11967568,
+ "best_epoch": 7
+}
+det_hands_hito1: 11,281,926 parámetros entrenables en cuda | 15000 imágenes train, 3000 val
+época  1 | loss 0.875 (obj 0.233 box 0.321 cls 0.000) | val mAP50 0.920 P 0.977 R 0.553 | 244s
+época  2 | loss 0.586 (obj 0.134 box 0.226 cls 0.000) | val mAP50 0.937 P 0.980 R 0.642 | 100s
+época  3 | loss 0.507 (obj 0.110 box 0.198 cls 0.000) | val mAP50 0.950 P 0.984 R 0.602 | 71s
+época  4 | loss 0.455 (obj 0.094 box 0.180 cls 0.000) | val mAP50 0.964 P 0.987 R 0.734 | 67s
+época  5 | loss 0.416 (obj 0.082 box 0.167 cls 0.000) | val mAP50 0.961 P 0.983 R 0.701 | 68s
+época  6 | loss 0.382 (obj 0.069 box 0.156 cls 0.000) | val mAP50 0.962 P 0.985 R 0.758 | 66s
+época  7 | loss 0.351 (obj 0.059 box 0.146 cls 0.000) | val mAP50 0.965 P 0.984 R 0.782 | 67s
+época  8 | loss 0.321 (obj 0.050 box 0.136 cls 0.000) | val mAP50 0.967 P 0.985 R 0.807 | 67s
+época  9 | loss 0.293 (obj 0.041 box 0.126 cls 0.000) | val mAP50 0.967 P 0.980 R 0.810 | 89s
+época 10 | loss 0.272 (obj 0.035 box 0.119 cls 0.000) | val mAP50 0.968 P 0.981 R 0.845 | 169s
+época 11 | loss 0.256 (obj 0.029 box 0.114 cls 0.000) | val mAP50 0.968 P 0.983 R 0.844 | 176s
+época 12 | loss 0.252 (obj 0.029 box 0.111 cls 0.000) | val mAP50 0.968 P 0.983 R 0.845 | 170s
+Mejor val mAP50: 0.9685
+{
+ "AP50_hand": 0.967,
+ "mAP50": 0.967,
+ "mAP50_95": 0.6323,
+ "precision": 0.956,
+ "recall": 0.9555,
+ "F1": 0.9558,
+ "mean_IoU_TP": 0.8358,
+ "op_score_from_val": 0.3,
+ "params_head": 788486,
+ "params_total": 11964998,
+ "best_epoch": 10
+}
+{
+ "AP50_like": 0.9581,
+ "AP50_dislike": 0.964,
+ "AP50_palm": 0.9789,
+ "AP50_stop": 0.991,
+ "AP50_fist": 0.9731,
+ "AP50_one": 0.9756,
+ "AP50_peace": 0.9869,
+ "AP50_ok": 0.9915,
+ "AP50_call": 0.9832,
+ "AP50_mute": 0.9766,
+ "AP50_no_gesture": 0.8664,
+ "mAP50": 0.9677,
+ "mAP50_95": 0.6498,
+ "precision": 0.969,
+ "recall": 0.9415,
+ "F1": 0.9551,
+ "mean_IoU_TP": 0.8368,
+ "op_score_from_val": 0.3,
+ "det_ckpt": "checkpoints/det/det_hands_hito1/best.pt",
+ "cls_ckpt": "checkpoints/resnet18_finetune/best.pt"
+}
+directo: imágenes con cada tipo de error (umbral 0.25): {'mano perdida': 340, 'clase equivocada': 145, 'falso positivo': 318}
+cascada: imágenes con cada tipo de error (umbral 0.3): {'mano perdida': 299, 'clase equivocada': 25, 'falso positivo': 147}

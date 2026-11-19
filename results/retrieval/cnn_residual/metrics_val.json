@@ -1,0 +1,29 @@
+{
+  "n_queries": 3300,
+  "coverage": 1.0,
+  "R@1": 0.9921212121212121,
+  "R@5": 0.9975757575757576,
+  "R@10": 0.9981818181818182,
+  "R@20": 0.9984848484848485,
+  "P@1": 0.9921212121212121,
+  "P@5": 0.9913939395862998,
+  "P@10": 0.9910000002971201,
+  "P@20": 0.9907727273722942,
+  "mAP": 0.9862338311383219,
+  "kNN10_accuracy": 0.9927272727272727,
+  "kNN10_macro_f1": 0.9927306779345048,
+  "encoder": "cnn_residual",
+  "split": "val",
+  "dim": 256,
+  "gallery_size": 16500,
+  "top1_confusions": {
+    "call -> like": 3,
+    "mute -> like": 2,
+    "no_gesture -> like": 2,
+    "palm -> ok": 2,
+    "stop -> palm": 2,
+    "no_gesture -> fist": 1,
+    "dislike -> no_gesture": 1,
+    "no_gesture -> mute": 1
+  }
+}

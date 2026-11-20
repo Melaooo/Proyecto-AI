@@ -25,3 +25,12 @@ checkpoints/**/*.pt
 
 # Hito 3: embeddings (se regeneran con python -m src.retrieval)
 data/embeddings/
+
+# Archivos auxiliares de LaTeX
+informe/**/*.aux
+informe/**/*.log
+informe/**/*.fls
+informe/**/*.fdb_latexmk
+informe/**/*.out
+informe/**/*.toc
+informe/**/*.synctex.gz

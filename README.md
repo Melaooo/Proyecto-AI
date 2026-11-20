@@ -207,3 +207,34 @@ $env:PYTHONUTF8=1
 - Si `activate` da error de permisos: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` y repetir.
 - `data/images/` (2.6 GB) no está en git: hay que copiarla aparte.
 - Si el DataLoader falla, poner `num_workers: 0` en el YAML. Si sale *CUDA out of memory*, bajar `batch_size` a 16.
+
+---
+
+# Hito 3: retrieval de gestos y sistema final
+
+Cada recorte de mano se pasa por el encoder del Hito 1 (`resnet18_ft`) y su vector, normalizado a
+largo 1, se compara por similitud coseno con una **galería = recortes de train** (16 500 manos).
+Las consultas son de val (para elegir) y de test (se reporta una vez); los splits son por usuario,
+así que nunca se busca a la misma persona. Relevante = vecino con el mismo gesto.
+
+```bash
+python -m src.retrieval                  # recortes con cajas reales, 4 encoders -> results/retrieval/comparison.md
+python -m src.retrieval_identidad        # ¿gesto o identidad? -> results/retrieval/identidad/resumen.md
+python -m src.retrieval_sistema          # sistema completo con el detector -> results/retrieval/sistema/resumen.md
+python -m src.demo_retrieval --image demo/Foto_Javier1.jpg   # demo final (o --random 3 con imágenes de test)
+```
+
+Los embeddings se guardan en `data/embeddings/` (no está en git; el primer comando los genera).
+
+**Sistema final:** imagen → detector de manos del Hito 2 → recorte (como en el Hito 1) → embedding
+→ Top-K en la galería → gesto por votación de los 10 vecinos → comando.
+
+Resultados en test (todas las manos de test, 6 049; las manos que el detector no encuentra cuentan como fallo):
+
+| Sistema | mAP | R@1 | R@5 | P@10 | kNN10 acc |
+|---|---|---|---|---|---|
+| Techo: recorte con la caja real | 0.996 | 0.996 | 0.997 | 0.995 | 0.996 |
+| **Detector + retrieval** | **0.955** | **0.954** | **0.956** | **0.954** | **0.954** |
+
+El detector pierde 243 manos (4 %, sobre todo lejanas) y genera 344 falsos positivos (64 % recuperan
+`no_gesture`, que no activa comandos). Detalle por tamaño de mano e IoU en `results/retrieval/sistema/`.

@@ -22,3 +22,6 @@ checkpoints/**/*.pt
 !checkpoints/det/det_gestures_hito1/*.pt
 !checkpoints/det/det_gestures_hito1_ft/*.pt
 !checkpoints/det/det_hands_hito1/*.pt
+
+# Hito 3: embeddings (se regeneran con python -m src.retrieval)
+data/embeddings/

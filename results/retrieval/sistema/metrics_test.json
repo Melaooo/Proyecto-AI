@@ -1,0 +1,41 @@
+{
+  "encoder": "resnet18_ft",
+  "op_score_det": 0.25,
+  "galeria": 16500,
+  "techo_cajas_reales": {
+    "manos": 6049,
+    "mAP": 0.9957752227783203,
+    "R@1": 0.9958670735359192,
+    "R@5": 0.9973549246788025,
+    "P@10": 0.9954042434692383,
+    "kNN10_acc": 0.9955364523061663
+  },
+  "sistema_detector": {
+    "manos": 6049,
+    "mAP": 0.9546675345239797,
+    "R@1": 0.9542073069928914,
+    "R@5": 0.9560257893866755,
+    "P@10": 0.9540750536914304,
+    "kNN10_acc": 0.9540419904116383
+  },
+  "manos_perdidas": 243,
+  "detecciones": 6150,
+  "falsos_positivos": 344,
+  "sim_top1_media": {
+    "detecciones correctas": 0.9898717403411865,
+    "falsos positivos": 0.9368486404418945
+  },
+  "knn_de_falsos_positivos": {
+    "no_gesture": 221,
+    "mute": 29,
+    "fist": 18,
+    "one": 18,
+    "like": 15,
+    "dislike": 14,
+    "call": 12,
+    "peace": 7,
+    "stop": 4,
+    "ok": 4,
+    "palm": 2
+  }
+}

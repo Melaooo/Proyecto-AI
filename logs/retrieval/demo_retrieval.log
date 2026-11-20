@@ -1,0 +1,25 @@
+
+Foto_Javier1.jpg: 1 mano(s)
+  mano 1: peace       10/10 votos, similitud top-1 1.00  -> comando: canal 2
+  imagen: results/demo_retrieval/Foto_Javier1_retrieval.jpg
+
+Foto_Javier2.jpg: 1 mano(s)
+  mano 1: mute        10/10 votos, similitud top-1 0.99  -> comando: silenciar
+  imagen: results/demo_retrieval/Foto_Javier2_retrieval.jpg
+
+Foto_Javier3.jpg: 1 mano(s)
+  mano 1: like        10/10 votos, similitud top-1 0.98  -> comando: subir volumen
+  imagen: results/demo_retrieval/Foto_Javier3_retrieval.jpg
+
+8e0bd611-48d2-4855-9b55-64b471428697.jpg: 1 mano(s)
+  mano 1: peace       10/10 votos, similitud top-1 1.00  -> comando: canal 2
+  imagen: results/demo_retrieval/8e0bd611-48d2-4855-9b55-64b471428697_retrieval.jpg
+
+8d40893b-484b-4403-aecb-fc146e226197.jpg: 2 mano(s)
+  mano 1: peace       10/10 votos, similitud top-1 0.99  -> comando: canal 2
+  mano 2: no_gesture  10/10 votos, similitud top-1 0.99  -> comando: (sin comando)
+  imagen: results/demo_retrieval/8d40893b-484b-4403-aecb-fc146e226197_retrieval.jpg
+
+777991f3-e14a-4dcb-b6da-04335bf204db.jpg: 1 mano(s)
+  mano 1: like        10/10 votos, similitud top-1 0.99  -> comando: subir volumen
+  imagen: results/demo_retrieval/777991f3-e14a-4dcb-b6da-04335bf204db_retrieval.jpg

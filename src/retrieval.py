@@ -161,7 +161,8 @@ def ranking_metrics(q_emb, q_lab, g_emb, g_lab, device, batch=512):
         # AP = promedio de la precisión acumulada en cada posición donde aparece un relevante
         out["AP"].append(((rel.cumsum(1) / ranks) * rel).sum(1) / n_rel[ql])
         # kNN: el gesto más repetido entre los K_VOTE vecinos (empate -> el de índice menor)
-        out["knn_pred"].append(gl[order[:, :K_VOTE]].mode(dim=1).values)
+        # (en CPU: torch.mode no está implementado en MPS, la GPU de los Mac)
+        out["knn_pred"].append(gl[order[:, :K_VOTE]].cpu().mode(dim=1).values.to(device))
         out["top"].append(order[:, :max(KS)])
     return {k: torch.cat(v).cpu().numpy() for k, v in out.items()}
 
